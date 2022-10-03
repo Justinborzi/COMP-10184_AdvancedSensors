@@ -29,6 +29,11 @@ void setup()
 
   // Start the DS18B20 sensor
   DS18B20.begin();
+
+  // Application Start
+  Serial.println("\nTemperature Application");
+
+  // Check if device is installed.
   if (!DS18B20.getAddress(sensor, 0))
   {
     Serial.println("No DS18B20 temperature sensors are installed!");
